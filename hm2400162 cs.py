@@ -1,4 +1,4 @@
-C1 = [
+PC1 = [
     57,49,41,33,25,17,9,
     1,58,50,42,34,26,18,
     10,2,59,51,43,35,27,
@@ -206,7 +206,7 @@ def decrypt_text(encrypted_blocks, roundkeys):
         plaintext += bitstowords(bits) 
     return plaintext.rstrip()
         
-key = generatekey("hamza123")  
-text="hamzaomarahmmed123456"
+key = generatekey(input("enter 8 char key: "))  
+text=input("enter text to encrypt: ")
 print(encrypt_text(text,key))       
 print(decrypt_text(encrypt_text(text,key),key))
